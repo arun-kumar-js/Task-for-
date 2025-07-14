@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Montserrat, Poppins } from 'react-native-paper';
 import { TextInput } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
-
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 const Login = () => {
   const [secureText, setSecureText] = useState(true);
@@ -29,14 +29,14 @@ const Login = () => {
         style={{
           justifyContent: 'center',
           alignItems: 'center',
-          paddingTop: 180,
+          paddingTop: verticalScale(110),
         }}
       >
         <Image
           source={require('../assets/image/logo.png')}
           style={{
-            width: 66,
-            height: 67,
+            width: scale(73),
+            height: verticalScale(67),
             opacity: 1,
             transform: [{ rotate: '0deg' }],
           }}
@@ -45,7 +45,7 @@ const Login = () => {
         <Text
           style={{
             fontFamily: 'Montserrat-Bold',
-            fontSize: 30,
+            fontSize: moderateScale(30),
             lineHeight: 30,
             letterSpacing: -0.17,
             fontWeight: 'bold',
@@ -56,11 +56,11 @@ const Login = () => {
         <Text
           style={{
             fontFamily: 'Montserrat-Regular',
-            fontSize: 18,
-            lineHeight: 24,
+            fontSize: moderateScale(18),
+            lineHeight: verticalScale(24),
             color: '#000000',
             textAlign: 'center',
-            marginTop: 8,
+            marginTop: verticalScale(8),
             fontWeight: '300',
           }}
         >
@@ -70,21 +70,21 @@ const Login = () => {
         <View
           style={{
             flexDirection: 'row',
-            borderRadius: 12,
+            borderRadius: moderateScale(12),
             borderWidth: 1,
             borderColor: '#D8CFCF',
-            padding: 12,
+            padding: moderateScale(12),
             alignItems: 'flex-start',
-            marginTop: 20,
+            marginTop: verticalScale(20),
             backgroundColor: '#ffff',
             width: '80%',
           }}
         >
           <View
             style={{
-              paddingTop: 5,
-              paddingRight: 10,
-              marginRight: 10,
+              paddingTop: verticalScale(5),
+              paddingRight: scale(10),
+              marginRight: scale(10),
               borderRightWidth: 1,
               borderColor: '#E0E0E0',
               justifyContent: 'center',
@@ -93,8 +93,8 @@ const Login = () => {
             <Image
               source={require('../assets/image/email.png')}
               style={{
-                width: 24,
-                height: 24,
+                width: scale(24),
+                height: verticalScale(24),
                 tintColor: '#FEAB5B',
                 paddingTop: 1,
               }}
@@ -104,9 +104,9 @@ const Login = () => {
           <View style={{ flex: 1 }}>
             <Text
               style={{
-                fontSize: 12,
+                fontSize: moderateScale(12),
                 color: '#999',
-                marginBottom: 2,
+                marginBottom: verticalScale(2),
                 fontFamily: 'Montserrat-Regular',
               }}
             >
@@ -114,7 +114,7 @@ const Login = () => {
             </Text>
             <TextInput
               style={{
-                fontSize: 16,
+                fontSize: moderateScale(16),
                 color: '#000',
                 fontFamily: 'Montserrat-SemiBold',
                 padding: 0,
@@ -126,21 +126,21 @@ const Login = () => {
         <View
           style={{
             flexDirection: 'row',
-            borderRadius: 12,
+            borderRadius: moderateScale(12),
             borderWidth: 1,
             borderColor: '#D8CFCF',
-            padding: 12,
+            padding: moderateScale(12),
             alignItems: 'flex-start',
-            marginTop: 20,
+            marginTop: verticalScale(20),
             backgroundColor: '#ffff',
             width: '80%',
           }}
         >
           <View
             style={{
-              paddingTop: 5,
-              paddingRight: 10,
-              marginRight: 10,
+              paddingTop: verticalScale(5),
+              paddingRight: scale(10),
+              marginRight: scale(10),
               borderRightWidth: 1,
               borderColor: '#E0E0E0',
               justifyContent: 'center',
@@ -149,8 +149,8 @@ const Login = () => {
             <Image
               source={ require('../assets/image/lock.png')}
               style={{
-                width: 24,
-                height: 24,
+                width: scale(24),
+                height: verticalScale(24),
                 tintColor: '#FEAB5B',
                 paddingTop: 1,
               }}
@@ -160,9 +160,9 @@ const Login = () => {
           <View style={{ flex: 1 }}>
             <Text
               style={{
-                fontSize: 12,
+                fontSize: moderateScale(12),
                 color: '#999',
-                marginBottom: 2,
+                marginBottom: verticalScale(2),
                 fontFamily: 'Montserrat-Regular',
               }}
             >
@@ -171,7 +171,7 @@ const Login = () => {
             <TextInput
               secureTextEntry={secureText}
               style={{
-                fontSize: 16,
+                fontSize: moderateScale(16),
                 color: '#000',
                 fontFamily: 'Montserrat-SemiBold',
                 padding: 0,
@@ -180,13 +180,13 @@ const Login = () => {
           </View>
           <TouchableOpacity
             onPress={() => setSecureText(!secureText)}
-            style={{ justifyContent: 'center', paddingLeft: 8 }}
+            style={{ justifyContent: 'center', paddingLeft: scale(8) }}
           >
             <Image
               source={require('../assets/image/Eye.png')}
               style={{
-                width: 24,
-                height: 24,
+                width: scale(24),
+                height: verticalScale(24),
                 tintColor: '#8B8B8B',
               }}
             />
@@ -200,12 +200,12 @@ const Login = () => {
         >
           <Text
             style={{
-              fontSize: 14,
+              fontSize: moderateScale(14),
               color: '#0052BB',
-              marginTop: 12,
+              marginTop: verticalScale(12),
               textAlign: 'center',
               fontFamily: 'Poppins-Regular',
-              paddingLeft: 200,
+              paddingLeft: scale(200),
             }}
           >
             Forgot password?
@@ -215,10 +215,10 @@ const Login = () => {
         <TouchableOpacity
           style={{
             backgroundColor: '#0a59d6',
-            borderRadius: 6,
-            paddingVertical: 16,
-            paddingHorizontal: 24,
-            marginTop: 35,
+            borderRadius: moderateScale(6),
+            paddingVertical: verticalScale(16),
+            paddingHorizontal: scale(24),
+            marginTop: verticalScale(35),
             width: '80%',
             alignItems: 'center',
           }}
@@ -227,7 +227,7 @@ const Login = () => {
           <View>
             <Text
               style={{
-                fontSize: 17,
+                fontSize: moderateScale(17),
                 color: '#fff',
                 fontFamily: 'Montserrat',
                 fontWeight: '500',
